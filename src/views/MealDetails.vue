@@ -1,12 +1,12 @@
 <template>
-  <div class="m-5 w-[600px] mx-auto">
-    <h1 class="text-5xl font-bold mb-5">{{ meal.strMeal }}</h1>
+  <div class="gap-5 grid grid-cols-1 md:grid-cols-2 m-5 w-[800px] mx-auto">
+    <div ><h1 class="text-5xl font-bold mb-5">{{ meal.strMeal }}</h1>
     <img
       :src="meal.strMealThumb"
       :alt="meal.strMeal"
       class="w-full object-cover"
-    />
-    <div class="grid grid-cols-1 md:grid-cols-3 mb-4 mt-4">
+    /></div>
+    <div><div class="grid grid-cols-1 md:grid-cols-3 mb-4 mt-4">
       <div>
         <strong class="font-bold">Category:</strong> {{ meal.strCategory }}
       </div>
@@ -42,7 +42,8 @@
     </div>
     <div class="my-4"><p>{{ meal.strInstructions }}</p></div>
     <YouTubeButton class="mb-10" :href="meal.strYoutube"/>
-    <div class="text-transparent">$nbsp;</div>
+    <div class="text-transparent">$nbsp;</div></div>
+    
   </div>
 </template>
 
